@@ -7,7 +7,7 @@
     <language>es</language>
     <copyright>Cristina</copyright>
     <pubDate>Sat, 26 Apr 2025 19:30:39 GMT</pubDate>
-    <lastBuildDate>Sun, 27 Apr 2025 09:52:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 27 Apr 2025 10:05:02 GMT</lastBuildDate>
     <category>Mascotas</category>
     <generator>Absolute RSS Editor</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
@@ -18,7 +18,23 @@
       <description>Una foto con varios animales.</description>
     </image>
     <item>
-      <title>Cómo cuidar el pelo de mi mascota</title>
+      <title>Elegir un buen arnés</title>
+      <link>https://mrhueso.com/7-claves-para-elegir-un-buen-arnes-para-tu-perro/</link>
+      <description>7 claves pra elegir un buen arnés para tu perro</description>
+      <category>Mascotas</category>
+      <guid isPermaLink="false">D3BEE761-E4C1-48D9-B1FB-5211799826DF</guid>
+      <pubDate>Sun, 27 Apr 2025 09:58:30 GMT</pubDate>
+    </item>
+    <item>
+      <title>Ley de bienestar animal</title>
+      <link>https://www.caser.es/seguros-de-mascotas/articulos/nueva-ley-bienestar-animal</link>
+      <description>Ley Bienestar Animal: cambios en obligaciones y prohibiciones</description>
+      <category>Leyes</category>
+      <guid isPermaLink="false">4E224A17-B2B3-4876-A996-93F8591BB9C1</guid>
+      <pubDate>Sun, 27 Apr 2025 09:57:15 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cuidar el pelo de nuestra mascota</title>
       <link>https://www.anicura.es/consejos-de-salud/perro/consejos-de-salud/como-cuidar-el-pelo-de-mi-mascota/</link>
       <description>Cosas a tener en cuenta a la hora de cuidar el pelo de nuestro perro.</description>
       <category>Perros</category>
