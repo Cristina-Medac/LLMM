@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="css/style.css"> <!--link al css-->
+</head>
+
+<body>
+
+
+    <h1>LISTA DE TAREAS</h1>
+
+    <div class="contenedor">
+
+        <div class="buscador">
+            <input type="text" id="nuevatarea" placeholder="Introduce la tarea..."> <!--cuadro de texto-->
+            <button id="botonañadir" onclick="añadirtarea()">Añadir</button> <!--botón de añadir-->
+        </div>
+
+        <div class="bloque-pendientes">
+
+            <h3 style="text-align: center;">TAREAS PENDIENTES</h3>
+            <p>Cantidad de tareas: <span id="contador">0</span></p>
+            <!--lo hago con span para que el contador quede en la linea-->
+            <div class="task-list" id="tareas1"> <!-- bloque para las tareas-->
+                <span class="importante" id="importante" onclick="cambiarPrioridad()">!</span> <!--signo importante-->
+
+                <span class="tarea-nombre" id="tarea-nombre" onclick="verTarea()" onmouseover="resaltarTarea">
+                    <!--para desplegar el texto-->
+                    Perro </span>
+                <span class="btn-borrar" onclick="eliminarTarea()"> X </span>
+
+
+                <p id="texto-completo" class="texto"> Tengo que llevar al perro a que le corten el pelo y recordarle
+                    al peluquero que tenga cuidado con las orejas
+                    <span class="textaco" onclick="ocultarTarea()"> Ocultar </span>
+                </p>
+
+                <div class="info-extra"> <!--bloque para la fecha y la cantidad de palabras-->
+                    <span class="fecha">fecha aqui</span> |
+                    <span class="palabras">cantidad de palabras</span>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="bloque-done">
+
+            <h3 style="text-align: center;">TAREAS FINALIZADAS</h3>
+
+            <div class="task-list" id="tareas2"> <!-- bloque para las tareas-->
+
+                <span class="tarea-nombre" onclick="verTarea()" onmouseover="resaltarTarea">
+                    <!--para desplegar el texto-->
+                    Perro </span>
+                <span class="btn-borrar" onclick="eliminarTarea()"> X </span>
+
+
+                <p id="texto-completo"> Tengo que llevar al perro a que le corten el pelo y recordarle
+                    al peluquero que tenga cuidado con las orejas
+                    <span class="textaco" onclick="ocultarTarea()"> Ocultar </span>
+                </p>
+
+                <div class="info-extra"> <!--bloque para la fecha y la cantidad de palabras-->
+                    <span class="fecha">fecha aqui</span> |
+                    <span class="palabras">cantidad de palabras</span>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script2.js"></script> <!--enlace al script-->
+
+</body>
+
+</html>

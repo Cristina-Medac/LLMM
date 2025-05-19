@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo4</title>
+    <!--Insertar imagen dentro de un div-->
+    <style>
+        #cabecera {
+            border: 2px solid blue;
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="cabecera">
+        <p> Prueba de inserción de imagen dentro del div</p>
+        <!--<img src="https://data.cervantesvirtual.com/mediacontent/2017/07/Wikipedia-es-logo-black-on-white.png"> -->
+
+    </div>
+
+        <script>
+            var imagenURL = "https://data.cervantesvirtual.com/mediacontent/2017/07/Wikipedia-es-logo-black-on-white.png";
+            var imagen = document.createElement("img");
+            imagen.src = imagenURL;
+            console.log(imagen);
+            var prueba = document.getElementById("cabecera");
+            prueba.appendChild(imagen);
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- <body> -->
+
+ <div class="contenedor">
+
+        <h1>LISTA DE TAREAS</h1>
+
+        <div class="seccionIntro">
+            <input type="text" id="nuevatarea" placeholder="Introduce la tarea..."> <!--cuadro de texto-->
+            <button id="botonañadir">Añadir</button> <!--botón de añadir-->
+        </div>
+
+        <p>Cantidad de tareas: <span id="contadorTareas">0</span></p>
+        <!--lo hago con span para que el contador quede en la linea-->
+
+        <div class="task-list" id="tareas">
+            <div class="task">
+                <span class="importante" onclick="cambiarPrioridad">!</span>
+                <span class="task-name" onclick="verTarea" onmouseover="resaltarTarea" onmouseout="quitarResaltado">
+                    Tengo que llevar al perro a que le corten el pelo y recordarle al peluquero que tenga cuidado con las orejas
+                </span>
+                <div class="task-info">
+                    <span class="fecha">fecha aqui</span>
+                    <span class="palabras">cantidad de palabras</span>
+                </div>
+
+                <button class="botonborrar" onclick="eliminarTarea"> X </button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script> <!--enlace al script-->

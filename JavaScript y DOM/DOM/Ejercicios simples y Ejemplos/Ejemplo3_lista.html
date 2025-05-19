@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 3</title>
+    <!-- Crear una lista de la compra-->
+
+    <script>
+        function addElement(){
+
+            //al terminar con un .value, solo cogerá el valor, el texto
+            var input = document.getElementById("newLine").value;
+
+            if(input){
+                
+                console.log("Prueba de salida: " + input);
+
+                var newLi = document.createElement("li");
+                //var lista = document.getElementsByTagName('ul')[0]; --> eto tambien es vlido
+                var lista = document.querySelector('ul'); // --> esto coge el primer ul que encuentra
+                lista.appendChild(newLi);
+                newLi.innerHTML = input;
+                document.getElementById("newLine").value = ""; //para que al crear, se borre el cuadro de texto (aparezca vacío)
+            }else {
+                document.getElementById("newLine").style.backgroundColor = "Orange"
+
+            }
+        
+        }
+    </script>
+</head>
+<body>
+    <!--lo que se meta en la caja será el value=" " del input-->
+    <input id="newLine" type="text" name="newLine">
+    <button onclick="addElement()"> Crear </button>
+    <ul>
+
+    </ul>
+
+</body>
+</html>

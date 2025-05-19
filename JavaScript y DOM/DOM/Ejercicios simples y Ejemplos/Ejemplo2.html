@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+    <!--Al darle al botón cambia el texto-->
+
+    <script>
+        //creo la función
+        function cambiar(){
+            //para coger el título cojo su ID y lo guardo en una variable
+            var tit = document.getElementById("titulo");
+            /*guardamos el input, usando el TagName porque no tiene id. Como sabrmos que solo hay
+            un input, pues cogemos la posición 0, si hubiese más habría más opciones*/
+            var boton = document.getElementsByTagName("input")[0];
+            //cambiar el texto del botón
+            boton.value = "Cambiado !!";
+            //cambiar la duración. en este caso directamente, sin meterlo en una variable.
+            document.getElementById("duracion").innerHTML = "<b> 250 </b>"
+            console.log(tit); //al pulsar el botón (el evento), saldrá en la consola
+            //cambiar el estilo de todo al darle al botón
+            var cuerpo = document.getElementById("cuerpo");
+            tit.style.border = "solid 2px chocolate";
+            tit.style.textAlign = "center";
+            tit.style.boxShadow = "10px 10px 10px grey";
+
+            cuerpo.style.backgroundColor = "black";
+            cuerpo.style.color = "white";
+
+            boton.style.backgroundColor = "white";
+            
+        }
+       
+
+    </script>
+</head>
+<body id="cuerpo">
+    <h1 id="titulo">Desarrollo de aplicaciones <br> Multiplataforma/Web</h1>
+    <h2 id="modulo">Módulo: Lenguaje de Marcas</h2>
+    <h2>Duración: <span id="duracion">129</span> horas </h2> <!--el SPAN es porque nos interesará coger solo el número-->
+
+    <!--CAMBIA AL PULSAR-->
+    <!--<input type="button" value="Cambiar" onclick="cambiar()" /> -->
+    <!--CAMBIA AL PASAR EL RATÓN POR ENCIMA-->
+    <input type="button" value="Cambiar" onmouseover="cambiar()"/> 
+    
+</body>
+</html>

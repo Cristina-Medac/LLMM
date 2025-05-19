@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <p>Calcula la letra correspondiente a un número de DNI español. La fórmula matemática para el 
+        cálculo de la letra del DNI, se basa en calcular el resto del número dividido por 23. 
+        El valor obtenido indica el índice que tengo que buscar en el array de letras que se puede 
+        ver en el código, teniendo en cuenta que empieza en 0.
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 
+        'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];</p>
+    
+    <script>
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 
+        'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+        var numero = (prompt("Introduce el número de DNI (sin la letra): "));
+
+
+        if(numero <0 || numero>99999999){
+            alert("El número no es válido. ")
+        }else {
+            var letraFinal = letras[numero%23];
+        }
+        alert("El DNI completo es " + numero + letraFinal);
+    </script>
+</body>
+</html>

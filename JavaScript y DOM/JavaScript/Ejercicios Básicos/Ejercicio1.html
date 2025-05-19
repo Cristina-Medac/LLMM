@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <p>Script que pida por teclado el nombre y la edad. Posteriormente en un panel informativo debe 
+        indicar cuantos años le queda para jubilarse.</p>
+    <script>
+        var nombre = prompt("Introduce tu nombre: ");
+        var edad = prompt("Introduce tu edad: ")
+        tiempoRestante = (70 - parseInt(edad));
+        document.write(nombre + ", te quedan " + tiempoRestante + " años para jubilarte.")
+    </script>
+</body>
+</html>

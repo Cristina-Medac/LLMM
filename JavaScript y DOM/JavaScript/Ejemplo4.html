@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19. Funciones y propiedades predefinidas</title>
+</head>
+<body>
+    <p>FUNCIONES Y PROPIEDADES PREDEFINIDAS</p>
+
+    <script>
+        var cad="Lenguaje de Marcas";
+        var miarray;
+
+        document.write("Longitud: " + cad.length + "<br>"); //Longitud: 18
+        document.write(cad.toUpperCase()+ "<br>"); //LENGUAJE DE MARCAS
+        document.write(cad.charAt(5) + "<br>"); //a (saca la cadena en la posición 5)
+        document.write(cad.indexOf("a") + "<br>");//5, saca la posición de la primera "a"
+        document.write(cad.substring(0,8));//Lenguaje (saca lo que hay desde la posición A a la posición B)
+        //Si pones (6,2) --> saca dos caracteres a partir de la posición 6
+        miarray=cad.split(" "); //separa los arrays 
+        document.write(miarray + "<br>"); //muestra el array, seaarado por defecto por comas
+
+        document.write(miarray.join("***"))//entre cada array aparece ***. En vez de separarlo por comas lo separa por lo que digamos
+        miarray.pop(); //el pop elimina la última
+        console.log(miarray); //Lenguaje de
+        miarray.push("Bases de datos");//Lenguaje de Bases de datos (el último elemento ahroa será "Bases de datos")
+        miarray.unshift("Hola florecilla");
+        console.log(miarray);
+        document.write(miarray.reverse());//lo pone al revés
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <!-- Dos botones, según el botón al que le demos el color del texto cambia a un color u otro-->
+    <script>
+        function cambiarColor(colorNuevo){
+            var parrafo = document.getElementById("texto");
+            parrafo.style.color = colorNuevo;
+            parrafo.style.fontSize = "20px";
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <p id="texto">Este párrafo cambiará de color. </p>
+    <!--estas son otras dos formas de crear el botón, y luego recogemos el color con la función-->
+    <!-- button alHacerClick funcion(parámetro que se le pasa > texto que aparece en el boton )-->
+    <button onclick="cambiarColor('Red')"> Rojo</button>
+    <button onclick="cambiarColor('Blue')"> Azul</button>
+
+    
+</body>
+</html>

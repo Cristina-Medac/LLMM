@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cambia(){
+
+            var elemento = document.getElementById('parrafo'); //el parrafo está guardado en la variable "elemento"
+            elemento.style.color = 'red'; //cuando pulsemos 'cambiar', el texto del párrafo cambiará de color
+            
+            /*También se puede usar usar el TagName, en este caso la 'p' pero lo que genera es un array.
+            Entonces hay que indicar la posición del elemento del array*/
+            //var elemento2 = document.getElementsByTagName('p')[0];
+           
+            console.log(elemento); //para ver los errores en consola (¿?)
+
+            //SI QUIERO CAMBIAR EL TEXTO HAY DOS FORMAS:
+            elemento.innerHTML = "Usando el <b>innerHTML</b>. Cambia el texto de ese elemento"
+            elemento.innerText = "Usando el <b>innerText</b>. Cambia el texto pero como texto plano, sin negrita por ejemplo"
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <p id="parrafo">Pulse un botón para cambiar su contenido</p> <!-- creo un id para el párrafo-->
+    <p>El script se puede poner en la cabecer ao en el body, antes de terminar. Aquí lo vamos 
+        a poner en la cabecera el script para que funcione el boton</p>
+    <p>Este es un segundo párrafo.</p>
+    <button onclick="cambia()"> Cambiar</button> <!--creo un botón con el texto 'cambia' y una función asociada al hacer click (cambia())-->
+    
+    
+</body>
+</html>
