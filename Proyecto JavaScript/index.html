@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de JavaScript y DOM</title>
+    <link rel="stylesheet" href="css/style.css"> <!--link al css-->
+</head>
+<body>
+
+    <h1>LISTA DE TAREAS</h1>
+
+    <div class="contenedor">
+        <!--bloque para añadir una tarea nueva-->
+        <div class="buscador">
+            <input type="text" id="nuevaTarea" placeholder="Introduce la tarea..."> <!--cuadro de texto-->
+            <button id="btn-añadir" onclick="añadirTarea()">Añadir</button><!--boton de añadir-->
+        </div>
+        <!--bloque de tareas pendientes-->
+        <div class="tareas-pendientes">
+            <h3 style="text-align: center;">TAREAS PENDIENTES</h3>
+            <p>Cantidad de tareas: <span id="contador">0</span></p>
+            <!--bloque de tarea individual-->
+            <div class="tarea" id="tarea">
+                <span class="importante" id="importante" onclick="cambiarPrioridad()">!</span>
+                <span class="nombre-tarea" id="nombre-tarea" onclick="expandir()">Título de la tarea</span>
+                <span class="btn-borrar" onclick="eliminarTarea()">X</span>
+                <p id="texto-completo" class="texto-completo">
+                    Este texto muestra la tarea completa, con toda la información que sea necesaria.
+                    <span class="btn-ocultar" id="btn-ocultar" onclick="ocultarTarea()">Ocultar</span>
+                </p>
+                <!--apartado para fecha y cantidad de palabras-->
+                <div class="info-extra">
+                    <span class="fecha" id="fecha">Fecha</span>
+                    <span class="caracteres" id="caracteres">Cantidad de caracteres</span>
+                </div>
+            </div>
+        </div>
+
+        <br> <!--divisor-->
+
+        <!--bloque de tareas realizadas-->
+        <div class="tareas-realizadas">
+            <h3 style="text-align: center;">TAREAS REALIZADAS</h3>
+            <!--bloque de tarea individual-->
+            <div class="tarea" id="tarea">
+                <span class="nombre-tarea" id="nombre-tarea" onclick="expandir()">Título de la tarea</span>
+                <span class="btn-borrar" onclick="eliminarTarea()">X</span>
+                <p id="texto-completo" class="texto-completo">
+                    Este texto muestra la tarea completa, con toda la información que sea necesaria.
+                    <span class="btn-ocultar" id="btn-ocultar" onclick="ocultarTarea()">Ocultar</span>
+                </p>
+                <!--apartado para fecha y cantidad de palabras-->
+                <div class="info-extra">
+                    <span class="fecha" id="fecha">Fecha</span>
+                    <span class="caracteres" id="caracteres">Cantidad de caracteres</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script><!--enlace al script de JavaScript-->
+</body>
+</html>
