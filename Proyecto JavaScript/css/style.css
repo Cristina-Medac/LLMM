@@ -60,7 +60,7 @@ button:hover{
     padding: 10px;
 }
 
-.tarea{
+.tareas{
     margin-top: 20px;
     align-items: center;
     border-bottom: 1px solid rgb(221,221,221);
@@ -79,6 +79,12 @@ button:hover{
     border-radius: 50%;
     padding-left: 7px;
     padding-right: 7px;
+
+    display: inline;
+}
+
+.nombre-tarea{
+   font-weight: bold;
 }
 
 .btn-borrar{
