@@ -115,6 +115,20 @@ function actualizarContador(){
 }
 
 
-/*
-texto.split("").reverse().join("")
-*/
+//FUNCION PARA CAMBIAR EL ESTILO A MODO OSCURO
+function cambiarEstilo(){
+    document.body.classList.toggle("modo-oscuro"); 
+    //toglle --> si no tiene la clase modo-oscuro, la pone. Si tiene la clase modo-oscuro, la quita
+}
+
+//FUNCIÓN PARA CAMBIAR EL ORDEN DE LOS CARACTERES
+function invertirTexto(id){
+    let elementos = document.getElementById(id);
+    elementos.innerText = elementos.innerText.split("").reverse().join("");
+}
+
+function alreves(){
+   let ids = ["1","2","3","btn-añadir","cambiar-estilo","reves"];
+   ids.forEach(invertirTexto);
+
+}

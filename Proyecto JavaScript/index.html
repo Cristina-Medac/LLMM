@@ -10,7 +10,7 @@
 
 <body>
 
-    <h1>LISTA DE TAREAS</h1>
+    <h1 id="1">LISTA DE TAREAS</h1>
 
     <div class="contenedor">
         <!--bloque para añadir una tarea nueva-->
@@ -20,7 +20,7 @@
         </div>
         <!--bloque de tareas pendientes-->
         <div class="tareas-pendientes">
-            <h3 style="text-align: center;">TAREAS PENDIENTES</h3>
+            <h3 id="2" style="text-align: center;">TAREAS PENDIENTES</h3>
             <p>Cantidad de tareas: <span id="contador">0</span></p>
             <!--bloque de tarea individual-->
             <div class="tareas1" id="tareas1">
@@ -44,7 +44,7 @@
 
         <!--bloque de tareas realizadas-->
         <div class="tareas-realizadas">
-            <h3 style="text-align: center;">TAREAS REALIZADAS</h3>
+            <h3 id="3" style="text-align: center;">TAREAS REALIZADAS</h3>
             <!--bloque de tarea individual-->
             <div class="tareas2" id="tareas2">
                 <div class="tareaHecha">
@@ -61,8 +61,15 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+    <div class="botones-extra">
+        <span><button id="cambiar-estilo" onclick="cambiarEstilo()">Cambiar estilo</button></span>
+        <span><button id="reves" onmouseover="alreves()" onmouseout="alreves()">Al revés</button></span>
+    </div>
+    
+
+
     <script src="js/script.js"></script><!--enlace al script de JavaScript-->
 </body>
 

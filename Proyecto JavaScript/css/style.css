@@ -111,5 +111,26 @@ button:hover{
     font-style: italic;
 }
 
+.botones-extra{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/*estilos para el modo oscuro*/
+.modo-oscuro {
+    background-color: black;
+    color: white;}
+.modo-oscuro .contenedor{
+        background-color: grey;}
+.modo-oscuro .tareas-pendientes{
+        background-color: rgb(147, 93, 54);}
+.modo-oscuro .tareas-realizadas{
+        background-color: rgb(47, 76, 43);}
+.modo-oscuro button{
+        background-color: rgb(48, 33, 87);}
+.modo-oscuro .tareas1, .tareas2{
+        color: black;}
 
 
