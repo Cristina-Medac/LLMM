@@ -60,7 +60,7 @@ button:hover{
     padding: 10px;
 }
 
-.tareas{
+.tareas1, .tareas2{
     margin-top: 20px;
     align-items: center;
     border-bottom: 1px solid rgb(221,221,221);
@@ -68,7 +68,7 @@ button:hover{
     background-color: rgb(249, 243, 229);
 }
 
-.importante{
+/*.importante{
     cursor: pointer;
     font-weight: bold;
     color: red;
@@ -81,13 +81,13 @@ button:hover{
     padding-right: 7px;
 
     display: inline;
-}
+}*/
 
 .nombre-tarea{
    font-weight: bold;
 }
 
-.btn-borrar{
+.btn-borrar , .btn-suprimir{
     background-color: transparent;
     font-size: 20px;
     color: red;
@@ -100,6 +100,15 @@ button:hover{
     color: rgb(216, 29, 29);
     font-size: x-large;
 }
+
+.verTexto{
+    display: block;
+}
+
+.fulltext{
+    display: none;
+}
+
 
 .info-extra{
     text-align: right;

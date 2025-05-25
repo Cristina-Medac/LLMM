@@ -23,15 +23,15 @@
             <h3 style="text-align: center;">TAREAS PENDIENTES</h3>
             <p>Cantidad de tareas: <span id="contador">0</span></p>
             <!--bloque de tarea individual-->
-            <div class="tareas" id="tareas">
+            <div class="tareas1" id="tareas1">
                 <div class="add-tarea">
-                    <span class="importante" id="importante" onclick="cambiarPrioridad()">!</span>
+                    <!--<span class="importante" id="importante" onclick="cambiarPrioridad()">!</span> -->
                     <span class="nombre-tarea" id="nombre-tarea" onclick="expandir()">Título de la tarea</span>
                     <span class="btn-borrar" onclick="eliminarTarea()">X</span>
-                    <p id="texto-completo" class="texto-completo">
+                    <p id="fulltext" class="fulltext">
                         Este texto muestra la tarea completa, con toda la información que sea necesaria.
                     </p>
-                    <span class="btn-ocultar" id="btn-ocultar" onclick="ocultarTarea()">Ocultar</span>
+                    <span class="btn-ocultar" id="btn-ocultar" >Ocultar</span>
                     <!--apartado para fecha y cantidad de palabras-->
                     <p class="info-extra">
                         <span class="fecha" id="fecha">Fecha</span>
@@ -47,11 +47,11 @@
         <div class="tareas-realizadas">
             <h3 style="text-align: center;">TAREAS REALIZADAS</h3>
             <!--bloque de tarea individual-->
-            <div class="tareas" id="tareas">
+            <div class="tareas2" id="tareas2">
                 <div class="tareaHecha">
                     <span class="nombre-tarea" id="nombre-tarea" onclick="expandir()">Título de la tarea</span>
                     <span class="btn-borrar" onclick="eliminarTarea()">X</span>
-                    <p id="texto-completo" class="texto-completo">
+                    <p id="fulltext" class="fulltext">
                         Este texto muestra la tarea completa, con toda la información que sea necesaria.
                     </p>
                     <span class="btn-ocultar" id="btn-ocultar" onclick="ocultarTarea()">Ocultar</span>
