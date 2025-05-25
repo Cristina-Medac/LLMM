@@ -1,9 +1,7 @@
 
 
-
 let boton = document.getElementById('btn-añadir');
 let entrada = document.getElementById('nuevaTarea');
-
 
 //FUNCIÓN PARA AÑADIR UNA TAREA NUEVA
 function añadirTarea(){
@@ -15,7 +13,6 @@ function añadirTarea(){
         let tareas = document.getElementById('tareas1');
         let bloqueNT = document.createElement('div');
         tareas.appendChild(bloqueNT);
-        bloqueNT.prioridad = false;
         bloqueNT.className = "tareas1";
 
         //titulo de la tarea
@@ -58,7 +55,6 @@ function añadirTarea(){
         let n_carac = entrada.value.length; //coge los caracteres introducidos y cuenta su longitud
         caracteres.innerHTML = n_carac + " caracteres."
 
-        
         entrada.value = "";
         
         //llamada a la función para borrar tarea
@@ -66,9 +62,6 @@ function añadirTarea(){
             eliminarTarea(bloqueNT);
         }
         
-        
-
-
         //FUNCIÓN PARA MOSTRAR Y OCULTAR
         pOcultar.addEventListener('click', function(){
             
@@ -82,8 +75,6 @@ function añadirTarea(){
             }
         })
 
-
-
         //actualizo el contador llamando a la función
         actualizarContador();
         
@@ -92,17 +83,16 @@ function añadirTarea(){
     }
 };
 
+
+
 //FUNCIÓN PARA ELIMINAR LA TAREA
 function eliminarTarea(laTarea){
     if(laTarea.parentNode.id ==='tareas2'){
         laTarea.remove();  
-
     }else {
         let tareasTerminadas = document.getElementById('tareas2');
         tareasTerminadas.appendChild(laTarea);
-        
     }
-
     actualizarContador();
 }
 
@@ -130,5 +120,4 @@ function invertirTexto(id){
 function alreves(){
    let ids = ["1","2","3","btn-añadir","cambiar-estilo","reves"];
    ids.forEach(invertirTexto);
-
 }

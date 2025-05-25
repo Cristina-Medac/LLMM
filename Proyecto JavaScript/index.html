@@ -25,12 +25,11 @@
             <!--bloque de tarea individual-->
             <div class="tareas1" id="tareas1">
                 <div class="add-tarea">
-                    <!--<span class="importante" id="importante" onclick="cambiarPrioridad()">!</span> -->
                     <span class="nombre-tarea" id="nombre-tarea" onclick="expandir()"></span>
                     <span class="btn-borrar" onclick="eliminarTarea()"></span>
                     <p id="fulltext" class="fulltext">
                     </p>
-                    <span class="btn-ocultar" id="btn-ocultar" ></span>
+                    <span class="btn-ocultar" id="btn-ocultar"></span>
                     <!--apartado para fecha y cantidad de palabras-->
                     <p class="info-extra">
                         <span class="fecha" id="fecha"></span>
@@ -63,14 +62,11 @@
         </div>
     </div>
 
-    <div class="botones-extra">
+    <p class="botones-extra">
         <span><button id="cambiar-estilo" onclick="cambiarEstilo()">Cambiar estilo</button></span>
         <span><button id="reves" onmouseover="alreves()" onmouseout="alreves()">Al revés</button></span>
-    </div>
-    
-
+    </p>
 
     <script src="js/script.js"></script><!--enlace al script de JavaScript-->
 </body>
-
 </html>
