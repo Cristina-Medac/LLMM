@@ -1,5 +1,6 @@
 
-//VARIABLES UTILIZADAS
+
+
 let boton = document.getElementById('btn-añadir');
 let entrada = document.getElementById('nuevaTarea');
 
@@ -36,8 +37,8 @@ function añadirTarea(){
         parrafo.className = "fulltext";
 
         //para la opcion de ocultar texto
-        let pOcultar = document.createElement('span');
-        pOcultar.innerHTML = 'Ocultar';
+        let pOcultar = document.createElement('p');
+        pOcultar.innerHTML = 'Mostrar';
         bloqueNT.appendChild(pOcultar);
         pOcultar.className = "btn-ocultar";
 
@@ -48,9 +49,15 @@ function añadirTarea(){
         let caracteres = document.createElement('span');
         infoExtra.appendChild(fecha);
         infoExtra.appendChild(caracteres);
-        fecha.innerHTML = 'fecha';
-        caracteres.innerHTML = 'caracteres';
         infoExtra.className = "info-extra";
+
+        let f_actual = new Date(); //crea objeto Date con la fecha y hora actual
+        let f_texto = f_actual.toLocaleDateString('es-Es'); //convierte esta fecha a un formato legible de un idioma especificado
+        fecha.innerHTML = f_texto + " | ";
+
+        let n_carac = entrada.value.length; //coge los caracteres introducidos y cuenta su longitud
+        caracteres.innerHTML = n_carac + " caracteres."
+
         
         entrada.value = "";
         
@@ -60,6 +67,8 @@ function añadirTarea(){
         }
         
         
+
+
         //FUNCIÓN PARA MOSTRAR Y OCULTAR
         pOcultar.addEventListener('click', function(){
             
@@ -72,6 +81,11 @@ function añadirTarea(){
 
             }
         })
+
+
+
+        //actualizo el contador llamando a la función
+        actualizarContador();
         
     }else{
         alert("La tarea no puede estar vacía");
@@ -88,5 +102,19 @@ function eliminarTarea(laTarea){
         tareasTerminadas.appendChild(laTarea);
         
     }
+
+    actualizarContador();
 }
 
+//FUNCIÓN PARA ACTUALIZAR EL CONTADOR
+function actualizarContador(){
+        let contenedor = document.getElementById('tareas1');//tareas1 = tareas pendientes
+        let divs = contenedor.getElementsByTagName('div');//busco todos los 'div' que hay y los guardo en una lista
+        let num_divs = divs.length;
+        document.getElementById('contador').innerText = num_divs -1; //cambio el número que hay  
+}
+
+
+/*
+texto.split("").reverse().join("")
+*/
